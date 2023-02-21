@@ -1,0 +1,365 @@
+body {
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+  overflow: hidden;
+  height: 100vh;
+}
+
+a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+/* TopNav */
+/* Add a black background color to the top navigation */
+#topnav {
+  overflow: hidden;
+  margin: 30px;
+  border-radius: 10px;
+}
+
+/* Style the elements inside the navigation bar */
+#topnav div {
+  position: relative;
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  background-color: rgb(64, 64, 64);
+}
+
+#topnav #homeField {
+  float: left;
+  border-radius: 10px;
+}
+
+#topnav #homeField:hover {
+  cursor: pointer;
+}
+
+#topnav #addMoneyField {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#loginLink {
+  border-radius: 10px;
+  width: 100px;
+}
+#loginLink:hover {
+  cursor: pointer;
+}
+
+#logoutField {
+  position: absolute;
+  float: right;
+  left: 90%;
+  background-color: white;
+  padding: 10px;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+/*************** login.js ************/
+#login-form {
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  padding: 60px;
+}
+
+#errorArea {
+  color: red;
+  margin-bottom: 20px;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 54px;
+  font-weight: bold;
+}
+
+#login-form input {
+  width: 80%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  font-size: 16px;
+}
+
+#login-form button {
+  width: 80%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+#login-form a {
+  padding: 12px 20px;
+  margin-bottom: 20px;
+}
+
+#login-form button:hover {
+  background-color: #3e8e41;
+}
+
+#sign-up {
+  background-color: #007bff;
+}
+
+#sign-up:hover {
+  background-color: #0069d9;
+}
+
+#anonymous-sign-in {
+  background-color: #6c757d;
+}
+
+#anonymous-sign-in:hover {
+  background-color: #5a6268;
+}
+
+#signOutButton {
+  background-color: #dc3545;
+}
+
+#signOutButton:hover {
+  background-color: #c82333;
+}
+
+
+
+/*************** main.js ************/
+
+#gamePortal {
+  display: grid;
+  grid-column: 1;
+  grid-row: 1;
+  grid-gap: 20px;
+  position: relative;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 50%;
+}
+
+#errorArea {
+  text-align: center;
+  display: grid;
+  position: relative;
+  align-items: center;
+  color: rgb(94, 93, 93);
+}
+
+#CreateGameButton {
+  display: grid;
+  position: relative;
+  align-items: center;
+  left: 50%;
+  top: 100%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(66, 197, 48);
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+}
+
+#CreateGameButton:hover {
+  box-shadow: 0px 0px 10px 5px #c0c0c0c3;
+  background-color: rgb(75, 228, 55);
+  cursor: pointer;
+}
+
+#JoinGameButton {
+  display: grid;
+  position: relative;
+  align-items: center;
+  left: 50%;
+  top: -100%;
+  width: 300px;
+  transform: translate(-50%, -50%);
+  height: 100px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(66, 197, 48);
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+}
+
+#JoinGameButton:hover {
+  box-shadow: 0px 0px 10px 5px #c0c0c0c3;
+  background-color: rgb(75, 228, 55);
+  cursor: pointer;
+}
+
+/*************** index.js ************/
+#makeBetField {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5px;
+  font-size: large;
+  font-weight: bold;
+  border: none;
+  width: 200px;
+  box-shadow: 0px 0px 20px 5px #c0c0c0c3;
+  border: 4px solid rgba(33, 107, 21, 0.089);
+  border-radius: 10px;
+  text-align: center;
+}
+
+#makeBetField:hover {
+  border: 4px solid rgba(59, 161, 43, 0.233);
+  box-shadow: 0px 0px 20px 8px #c0c0c0c3;
+}
+
+#makeBetField:focus {
+  outline: none;
+}
+
+#makeBetButton {
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(66, 197, 48);
+  color: #fff;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+#makeBetButton:hover {
+  cursor: pointer;
+}
+
+#chanceOfWinningArea {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  display: inline-flex;
+  position: relative;
+  top: -50%;
+  left: -5%;
+  float: right;
+}
+
+@media (max-width:750px) {
+  #chanceOfWinningArea {
+    visibility: hidden;
+  }
+}
+
+
+
+/* Confetti effect */
+#confetti-canvas {
+  display: block;
+  z-index: 999999;
+  pointer-events: none;
+  height: 100%;
+  position: relative;
+  top: -670px;
+}
+
+/* The Wheel */
+#wheelOfFortune {
+  align-items: center;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  left: 50%;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+}
+
+#wheel {
+  display: block;
+  border: 10px solid rgba(0, 0, 0, 0.077);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 5px #c0c0c0c3;
+}
+
+#spin {
+  font: 1.5rem/0 sans-serif;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 30%;
+  margin: -15%;
+  background: #fff;
+  color: #fff;
+  box-shadow: 0px 0px 0px 8px currentColor, 0 0px 15px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  transition: 0.8s;
+}
+
+#spin::after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  border: 10px solid transparent;
+  border-bottom-color: currentColor;
+  border-top: none;
+}
+
+/* Prizepool area */
+#prizepoolArea {
+  display: block;
+}
+
+#prizepoolField {
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Chance of winning area */
+#chanceOfWinningArea {
+  display: block;
+}
+
+#chanceOfWinningField {
+  background-color: white;
+  width: 100px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
