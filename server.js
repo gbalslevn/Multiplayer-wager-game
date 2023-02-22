@@ -242,7 +242,7 @@ const frame = () => {
     }
     // Accelerate
     if (isAccelerating) {
-        angVel ||= angVelMin; // Initial velocity kick
+        //angVel ||= angVelMin; // Initial velocity kick
         angVel *= acceleration; // Accelerate
     }
 
