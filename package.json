@@ -5,5 +5,20 @@
     "firebase-admin": "^11.5.0",
     "nodemon": "^2.0.20",
     "socket.io": "^4.6.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "plainwheel-v2",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": "git+https://github.com/gbalslevn/Multiplayer-wager-game.git",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gbalslevn/Multiplayer-wager-game/issues"
+  },
+  "homepage": "https://github.com/gbalslevn/Multiplayer-wager-game#readme",
+  "description": ""
 }
