@@ -100,9 +100,11 @@ onValue(ref(db, `games/` + gameID + "/players"), (snapshot) => {
 		console.log("Ændring");
 	})
 	sectors = replacementSectors;
-	console.log(sectors);
 	getPrizePool();
 	console.log("Prizepool is: " + prizePool);
+	// Reset sectorPositions and radiansSum. It will get filled up when drawSector is called to each element in sectors
+	sectorsPositions = [];
+	radiansSum = 0;
 	sectors.forEach(drawSector);
 	const elSpin = document.querySelector("#spin");
 	elSpin.innerHTML = `${prizePool} DKK `;
@@ -129,7 +131,7 @@ const startGame = async () => {
 		sectorsPositions: sectorsPositions
 	})
 		.then(() => {
-			console.log("sectorsPositions update succesful.");
+			console.log("sectorsPositions update succesful." + sectorsPositions);
 		})
 		.catch((error) => {
 			console.log("sectorsPositions update failed");

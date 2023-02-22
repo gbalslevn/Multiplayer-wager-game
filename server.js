@@ -66,6 +66,7 @@ io.on("connection", (socket) => {
         isSpinning = true;
         isAccelerating = true;
         gameAngles = [];
+        // Wait for the game to generate gameAngles. It is getting generated because isSpinning and isAccelerating is set to true
         setTimeout(() => {
             let lastAngle = gameAngles[Object.keys(gameAngles).length - 1];
             refThisGame.update({
@@ -88,6 +89,7 @@ io.on("connection", (socket) => {
                     console.log("winnerHasBeenFound update failed");
                 });
         }, 3000)
+        // When isSpinning is set to true, the wheel starts to spin for all clients which are in this game 
         setTimeout(() => {
             refThisGame.update({
                 isSpinning: true
@@ -219,7 +221,6 @@ let angVelMax = rand(0.25, 0.40); // Random ang.vel. to acceletare to - it deter
 function determineWinner(sectorsPositions, ang) {
     // we need to adjust the angle according to the way the circle is made - We use Pi * 2 (omkreds)
     ang = Math.PI * 2 - ang;
-    console.log("sectorpositions: " + sectorsPositions);
     for (const i in sectorsPositions) {
         const sector = sectorsPositions[i];
         const start = sector[1];

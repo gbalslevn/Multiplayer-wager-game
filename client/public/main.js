@@ -139,7 +139,6 @@ onAuthStateChanged(auth, (user) => {
 
         // ...
     } else {
-        const gamePortal = document.querySelector("#gamePortal");
         const loginLink = document.createElement("div");
         const errorArea = document.querySelector("#errorArea");
         loginLink.addEventListener('click', (e) => {
