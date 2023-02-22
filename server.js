@@ -26,7 +26,7 @@ app.use(express.static(staticDir))
 app.use(express.json())
 
 //app root
-app.get('/main', mainHandler);
+app.get('/', mainHandler);
 app.get('/login', loginHandler);
 app.get('/game', gameHandler);
 app.get('/signup', signUpHandler);

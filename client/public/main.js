@@ -178,7 +178,7 @@ function redirectToLogin() {
 
 function redirectToMain() {
     const currentURL = window.location.href.split('/')[0];
-    window.location.href = currentURL + '/main';
+    window.location.href = currentURL + '/';
 }
 
 // Generates a random color  
