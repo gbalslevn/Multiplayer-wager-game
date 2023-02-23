@@ -174,24 +174,24 @@ io.on("connection", (socket) => {
             });
 
 
-            
-        // remove all bets from players
-        refThisGamePlayers.once('value')
-            .then(function (snapshot) {
-                snapshot.forEach(function (childSnapshot) {
-                    let uid = childSnapshot.val().uid;
-                    let uidRef = db.ref('/games/' + gameID + '/players/' + uid);
-                    uidRef.update({
-                        bet: 0
-                    })
-                        .then(() => {
-                            console.log("bet has been reset to 0");
+
+            // remove all bets from players
+            refThisGamePlayers.once('value')
+                .then(function (snapshot) {
+                    snapshot.forEach(function (childSnapshot) {
+                        let uid = childSnapshot.val().uid;
+                        let uidRef = db.ref('/games/' + gameID + '/players/' + uid);
+                        uidRef.update({
+                            bet: 0
                         })
-                        .catch((error) => {
-                            console.log("bet failed to reset to 0");
-                        });
+                            .then(() => {
+                                console.log("bet has been reset to 0");
+                            })
+                            .catch((error) => {
+                                console.log("bet failed to reset to 0");
+                            });
+                    })
                 })
-            })
         }
     })
     /*
@@ -242,7 +242,9 @@ const frame = () => {
     }
     // Accelerate
     if (isAccelerating) {
-        //angVel ||= angVelMin; // Initial velocity kick
+        if (angVel === 0) {
+            angVel = angVelMin; // Initial velocity kick
+        } 
         angVel *= acceleration; // Accelerate
     }
 

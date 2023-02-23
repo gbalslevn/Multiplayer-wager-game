@@ -64,7 +64,7 @@ onAuthStateChanged(auth, (user) => {
 // For when the user wins - It should maybe be coins instead
 // https://www.cssscript.com/confetti-falling-animation/
 
-// Connects to the socket
+// Connects to the socket - front is served on the same domain as server. Therefore no need for io(url)
 const socket = io();
 
 // ***************** Wheel ******************
