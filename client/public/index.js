@@ -65,7 +65,7 @@ onAuthStateChanged(auth, (user) => {
 // https://www.cssscript.com/confetti-falling-animation/
 
 // Connects to the socket - front is served on the same domain as server. Therefore no need for io(url)
-const socket = io();
+const socket = io.connect("https://wager-game.onrender.com/");
 
 // ***************** Wheel ******************
 

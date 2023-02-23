@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
     "firebase": "^9.15.0",
     "firebase-admin": "^11.5.0",
@@ -12,7 +13,6 @@
   "name": "plainwheel-v2",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": "git+https://github.com/gbalslevn/Multiplayer-wager-game.git",
   "author": "",
   "license": "ISC",

@@ -14,9 +14,19 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const http = require('http');
+const cors = require('cors');
 const server = http.createServer(app);
 const { Server } = require('socket.io');
-const io = new Server(server);
+app.use(cors());
+const io = new Server(server, {
+    // specify the settings for the cors in the socket io server
+    cors: {
+        // origin - The server (url) which is going to be calling to our socket.io server
+        // in our case it is the local host for React.
+        origin: 'https://wager-game.onrender.com',
+        methods: ["GET", "POST", "UPDATE", "DELETE"],
+    },
+});
 
 let clientDir = path.join(__dirname, 'client')
 let staticDir = path.join(clientDir, 'public')
