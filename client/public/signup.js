@@ -93,7 +93,7 @@ function storeInDataBase(user) {
     const displayName = user.displayName;
     const photoURL = "none";
     const uid = user.uid;
-    const money = 0;
+    const money = 50;
 
 
     // stores the user in the database
